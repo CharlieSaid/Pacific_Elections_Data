@@ -5,4 +5,17 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
-// Ready to load district boundaries with L.geoJSON()
+fetch('wa_counties.geojson')
+  .then(res => res.json())
+  .then(data => {
+    L.geoJSON(data, {
+      style: {
+        color: "#3388ff",
+        weight: 1,
+        fillOpacity: 0.1
+      },
+      onEachFeature: (feature, layer) => {
+        layer.bindPopup(`County: ${feature.properties.NAME || feature.properties.name}`);
+      }
+    }).addTo(map);
+  });
