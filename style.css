@@ -5,8 +5,42 @@ body {
   }
   
   #map {
-    height: 90vh;
+    height: 85vh;
     width: 100%;
     margin-top: 10px;
+  }
+  
+  .layer-controls {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .layer-btn {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: 2px solid #007bff;
+    background-color: white;
+    color: #007bff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .layer-btn:hover {
+    background-color: #e3f2fd;
+  }
+  
+  .layer-btn.active {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .layer-btn.active:hover {
+    background-color: #0056b3;
   }
   

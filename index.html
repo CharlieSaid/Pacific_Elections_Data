@@ -9,6 +9,17 @@
 </head>
 <body>
   <h1>Washington State Interactive District Map</h1>
+  
+  <!-- Layer Control Panel -->
+  <div class="layer-controls">
+    <button id="counties-toggle" class="layer-btn active" onclick="toggleLayer('counties')">
+      Counties
+    </button>
+    <button id="school-districts-toggle" class="layer-btn" onclick="toggleLayer('school-districts')">
+      School Districts
+    </button>
+  </div>
+  
   <div id="map"></div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
